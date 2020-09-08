@@ -6,8 +6,20 @@
       {
           "type": "node",
           "request": "launch",
-          "name": "Launch Program app00",
+          "name": "Launch Program app00 : Hello World",
           "program": "${workspaceFolder}/app00.js"
+      },
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program app01 : class DateFormatter extends Date",
+          "program": "${workspaceFolder}/app01.js"
+      },
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program app02 : Object.defineProperty(Object.prototype, 'Enum'",
+          "program": "${workspaceFolder}/app02.js"
       }
   ]
 }
