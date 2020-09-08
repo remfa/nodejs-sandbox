@@ -20,6 +20,12 @@
           "request": "launch",
           "name": "Launch Program app02 : Object.defineProperty(Object.prototype, 'Enum'",
           "program": "${workspaceFolder}/app02.js"
+      },
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program app03 : Symbol-enum",
+          "program": "${workspaceFolder}/app03.js"
       }
   ]
 }
