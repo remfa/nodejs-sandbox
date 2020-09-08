@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/remfa/nodejs-sandbox/issues"
   },
-  "homepage": "https://github.com/remfa/nodejs-sandbox#readme"
+  "homepage": "https://github.com/remfa/nodejs-sandbox#readme",
+  "dependencies": {
+    "symbol-enum": "^4.0.3"
+  }
 }
