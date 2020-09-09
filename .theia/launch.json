@@ -26,6 +26,12 @@
           "request": "launch",
           "name": "Launch Program app03 : Symbol-enum",
           "program": "${workspaceFolder}/app03.js"
+      },
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program app04 : Symbol-enum with helper",
+          "program": "${workspaceFolder}/app04.js"
       }
   ]
 }

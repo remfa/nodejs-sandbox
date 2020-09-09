@@ -7,7 +7,7 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program app00",
+            "name": "Launch Program app00 : Hello World",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -16,7 +16,7 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program app01",
+            "name": "Launch Program app01 : class DateFormatter extends Date",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -25,7 +25,7 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program app02",
+            "name": "Launch Program app02 : Object.defineProperty(Object.prototype, 'Enum'",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -34,11 +34,20 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program app03",
+            "name": "Launch Program app03 : Symbol-enum",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\app03.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program app04 : Symbol-enum with helper",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\app04.js"
         }
     ]
 }
