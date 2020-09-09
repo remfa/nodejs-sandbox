@@ -1,5 +1,5 @@
 
-const { defineEnum, enumClassSize, enumClassHasKey, enumClassHasValue, enumKeysForLoop, enumItemsForLoop } = require('./app04-helper');
+const { defineEnum, enumClassSize, enumClassHasKey, enumClassHasValue, enumKeysMap, enumKeysFilter, enumKeysReduce, enumItemsMap, enumItemsFilter, enumItemsReduce } = require('./app04-helper');
 
 console.log("essai SymbolEnum with helper");
 
@@ -13,9 +13,18 @@ console.log("MyOwnEnum.a.toString():" + MyOwnEnum.a.toString());
 //Retrieves the key corresponding to the symbol.
 console.log("MyOwnEnum[val]:" + MyOwnEnum[val]);
 
-enumKeysForLoop(MyOwnEnum, function (x) { console.log("enumKeysForLoop x:" + x); })
 
-enumItemsForLoop(MyOwnEnum, function (x) { console.log("enumItemsForLoop x:" + x.toString()); })
+enumKeysMap(MyOwnEnum, function (x) { console.log("enumKeysMap x:" + x); })
+
+console.log("keyFilterOnaNc:" + enumKeysFilter(MyOwnEnum, (x) => ['a','c'].includes(x)));
+
+console.log("keyConcatenation:" + enumKeysReduce(MyOwnEnum, (a,b) => a + b, ""));
+
+enumItemsMap(MyOwnEnum, function (x) { console.log("enumItemsMap x:" + x.toString()); })
+
+enumItemsFilter(MyOwnEnum, (x) => [MyOwnEnum.b, MyOwnEnum.d].includes(x)).map((x) => console.log("enumItemsFilter x:" + x.toString()));
+
+console.log("itemsConcatenation:" + enumItemsReduce(MyOwnEnum, (a,b) => a.toString() + b.toString(), ""));
 
 console.log("enumClassSize(MyOwnEnum):" + enumClassSize(MyOwnEnum));
 

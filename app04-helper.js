@@ -54,18 +54,34 @@ function enumClassHasValue(enumClass, enumItem) {
     return enumClass[SymbolEnum.hasValue](enumItem);
 }
 
-function enumKeysForLoop(enumClass, callback) {
-    for (let it of enumClass[SymbolEnum.keys]()) {
-        // console.log("enumKeysForLoop key:" + it);
-        callback(it);
-    }
+function enumKeysMap(enumClass, callback) {
+    var arr = Array.from(enumClass[SymbolEnum.keys]());
+    return arr.map(callback);
 }
 
-function enumItemsForLoop(enumClass, callback) {
-    for (let it of enumClass[SymbolEnum.values]()) {
-        // console.log("enumKeysForLoop key:" + it);
-        callback(it);
-    }
+function enumKeysFilter(enumClass, callback) {
+    var arr = Array.from(enumClass[SymbolEnum.keys]());
+    return arr.filter(callback);
+}
+
+function enumKeysReduce(enumClass, callback, initial) {
+    var arr = Array.from(enumClass[SymbolEnum.keys]());
+    return arr.reduce(callback, initial);
+}
+
+function enumItemsMap(enumClass, callback,) {
+    var arr = Array.from(enumClass[SymbolEnum.values]());
+    return arr.map(callback);
+}
+
+function enumItemsFilter(enumClass, callback,) {
+    var arr = Array.from(enumClass[SymbolEnum.values]());
+    return arr.filter(callback);
+}
+
+function enumItemsReduce(enumClass, callback, initial) {
+    var arr = Array.from(enumClass[SymbolEnum.values]());
+    return arr.reduce(callback, initial);
 }
 
 module.exports = {
@@ -73,8 +89,12 @@ module.exports = {
     enumClassSize,
     enumClassHasKey,
     enumClassHasValue,
-    enumKeysForLoop,
-    enumItemsForLoop
+    enumKeysMap,
+    enumKeysFilter,
+    enumKeysReduce,
+    enumItemsMap,
+    enumItemsFilter,
+    enumItemsReduce
 }
 
 //////////////// v2 end
