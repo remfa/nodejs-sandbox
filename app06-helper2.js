@@ -1,12 +1,16 @@
+function Rectangle(hauteur, largeur) {
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+}
 
-module.exports = testMath = {
-    multiply(x, y) {
-        return x * y;
+module.exports = testRectangle = {
+    makeaRectangle(haut,larg) {
+        return new Rectangle(haut,larg);
     },
-    add(x, y) {
-        return x + y;
+    aireOfRectangle(aRectangle) {
+        return aRectangle.hauteur * aRectangle.largeur;
     },
-    squared(x) {
-        return this.multiply(x, x);
+    perimetreOfRecangle(aRectangle) {
+        return 2*aRectangle.hauteur + 2*aRectangle.largeur;
     },
 };
