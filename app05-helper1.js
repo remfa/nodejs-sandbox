@@ -1,17 +1,3 @@
-const SymbolEnum = require('symbol-enum');
-
-//////////////// v1 start
-
-// exports.defineEnum = (...keys) => {
-//     return new SymbolEnum(...keys);
-// };
-
-//////////////// v1 end
-
-
-
-//////////////// v2 start
-
 function logger(className) {
     return new Proxy(new className(), {
         get: function (target, name, receiver) {
@@ -31,9 +17,6 @@ function logger(className) {
     });
 }
 
-
 module.exports = {
     logger
 }
-
-//////////////// v2 end
