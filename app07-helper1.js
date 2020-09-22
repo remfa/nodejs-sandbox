@@ -1,8 +1,8 @@
 const handler = {
-    apply: function (target, thisArg, argumentsList) {
-        const res = target(argumentsList[0], argumentsList[1])
+    apply: function (target, thisArg, args) {
+        const res = Reflect.apply(target, undefined, args);
         console.log(
-            ' argumentsList -> ' + JSON.stringify(argumentsList)
+            ' args -> ' + JSON.stringify(args)
             + ', result -> ' + JSON.stringify(res)
         );
         return res;
