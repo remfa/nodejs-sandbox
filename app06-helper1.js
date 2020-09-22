@@ -4,8 +4,11 @@ function traceMethodCalls(obj) {
             const origMethod = target[propKey];
             return function (...args) {
                 const result = origMethod.apply(this, args);
-                console.log(propKey + JSON.stringify(args)
-                    + ' -> ' + JSON.stringify(result));
+                console.log(
+                    target["libName"]
+                    + "." + propKey + JSON.stringify(args)
+                    + ' -> ' + JSON.stringify(result)
+                );
                 return result;
             };
         }

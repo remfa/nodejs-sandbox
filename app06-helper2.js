@@ -6,13 +6,14 @@ function Rectangle(hauteur, largeur) {
 }
 
 module.exports = tracedTestRectangle= traceMethodCalls({
-    makeaRectangle(haut,larg) {
+    libName:"RectangleLib",
+    make(haut,larg) {
         return new Rectangle(haut,larg);
     },
-    aireOfRectangle(aRectangle) {
+    aire(aRectangle) {
         return aRectangle.hauteur * aRectangle.largeur;
     },
-    perimetreOfRecangle(aRectangle) {
+    perimetre(aRectangle) {
         return 2*aRectangle.hauteur + 2*aRectangle.largeur;
     },
 });
