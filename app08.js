@@ -1,5 +1,9 @@
 
-const likeEnumImport = requireFreeze("./app08-helper");
+const likeEnumImport = require("./app08-helper");
+
+console.log("essai method with home made like enum obj and helper");
+
+Object.freeze(likeEnumImport);
 
 console.log("likeEnumImport=" + JSON.stringify(likeEnumImport));
 
@@ -29,8 +33,3 @@ essaiA = 11;
 
 console.log("after change attempt essaiA=" + essaiA);
 
-function requireFreeze(path) {
-    const obj = require(path)
-    Object.freeze(obj);
-    return obj;
-}
