@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/remfa/nodejs-sandbox#readme",
   "dependencies": {
+    "dateformat": "^4.0.0",
     "symbol-enum": "^4.0.3"
   }
 }
