@@ -10,7 +10,7 @@ const STARTOF2020_TIME = 1580511600000;
 
 function getTestIdFromDate(startDate) {
   const result = to64String(startDate.getTime() - STARTOF2020_TIME);
-  // log(`getTestIdFromDate() startDate:${startDate.getTime()} startDate2020Offset:${startDate.getTime()-STARTOF2020_TIME} result:${result}`);
+  console.log(`getTestIdFromDate() startDate:${startDate.getTime()} startDate2020Offset:${startDate.getTime()-STARTOF2020_TIME} result:${result}`);
   getDateFromTestId(result);
   return result;
 }
@@ -18,7 +18,7 @@ function getTestIdFromDate(startDate) {
 function getDateFromTestId(testId) {
   const dateTime = to64Parse(testId) + STARTOF2020_TIME;
   const result = dateFormat(dateTime, "yyyymmdd_HHMMss.l");
-  // log(`getDateFromTestId() testId:${testId} result:${result}`);
+  console.log(`getDateFromTestId() testId:${testId} result:${result}`);
   return result;
 }
 
